@@ -1,0 +1,7 @@
+[submodule "backends/llama.cpp"]
+	path = backends/llama.cpp
+	url = https://github.com/ggml-org/llama.cpp.git
+
+[submodule "backends/stable-diffusion.cpp"]
+	path = backends/stable-diffusion.cpp
+	url = https://github.com/leejet/stable-diffusion.cpp.git
