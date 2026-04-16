@@ -5,7 +5,7 @@
 
 struct Model {
     std::string type;
-    Backend* handle;
+    Backend* backend = nullptr;
 
-    void* impl; // backend specific implementation (imported!)
+    void* impl = nullptr; // backend specific implementation (imported!)
 };
