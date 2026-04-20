@@ -113,12 +113,12 @@ endif()
 if(NOT SDCPP_BUILD_VERSION)
     set(SDCPP_BUILD_VERSION unknown)
 endif()
-message(STATUS "stable-diffusion.cpp version ${SDCPP_BUILD_VERSION}")
+message(STATUS "stable-diffusion.cpp_custom version ${SDCPP_BUILD_VERSION}")
 
 if(NOT SDCPP_BUILD_COMMIT)
     set(SDCPP_BUILD_COMMIT unknown)
 endif()
-message(STATUS "stable-diffusion.cpp commit ${SDCPP_BUILD_COMMIT}")
+message(STATUS "stable-diffusion.cpp_custom commit ${SDCPP_BUILD_COMMIT}")
 
 set_property(
   SOURCE ${CMAKE_CURRENT_SOURCE_DIR}/src/version.cpp

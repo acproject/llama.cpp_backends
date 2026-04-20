@@ -150,4 +150,4 @@ if (LLAMA_LLGUIDANCE)
     endif()
 endif()
 
-target_link_libraries(${TARGET} PUBLIC llama Threads::Threads)
+target_link_libraries(${TARGET} PUBLIC llama.cpp_custom Threads::Threads)

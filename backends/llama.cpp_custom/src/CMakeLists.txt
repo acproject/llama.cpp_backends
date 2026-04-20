@@ -151,20 +151,20 @@ add_library(llama.cpp_custom
             models/xverse.cpp
             )
 
-set_target_properties(llama PROPERTIES
+set_target_properties(llama.cpp_custom PROPERTIES
     VERSION ${LLAMA_INSTALL_VERSION}
     SOVERSION 0
-    MACHO_CURRENT_VERSION 0 # keep macOS linker from seeing oversized version number
+    MACHO_CURRENT_VERSION 0
 )
 
-target_include_directories(llama PRIVATE .)
-target_include_directories(llama PUBLIC ../include)
-target_compile_features   (llama PRIVATE cxx_std_17) # don't bump
+target_include_directories(llama.cpp_custom PRIVATE .)
+target_include_directories(llama.cpp_custom PUBLIC ../include)
+target_compile_features   (llama.cpp_custom PRIVATE cxx_std_17)
 
-target_link_libraries(llama PUBLIC ggml)
+target_link_libraries(llama.cpp_custom PUBLIC ggml)
 
 if (BUILD_SHARED_LIBS)
-    set_target_properties(llama PROPERTIES POSITION_INDEPENDENT_CODE ON)
-    target_compile_definitions(llama PRIVATE LLAMA_BUILD)
-    target_compile_definitions(llama PUBLIC  LLAMA_SHARED)
+    set_target_properties(llama.cpp_custom PROPERTIES POSITION_INDEPENDENT_CODE ON)
+    target_compile_definitions(llama.cpp_custom PRIVATE LLAMA_BUILD)
+    target_compile_definitions(llama.cpp_custom PUBLIC  LLAMA_SHARED)
 endif()
